@@ -96,3 +96,4 @@ def test_train_xgboost_classifier():
     assert "metrics" in result
     assert "feature_importances" in result
     assert result["metrics"]["roc_auc"] >= 0.0
+
