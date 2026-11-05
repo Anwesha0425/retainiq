@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  # PostgreSQL Analytics Warehouse
+  postgres:
+    image: postgres:15-alpine
+    container_name: analytics_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-customer_analytics}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql/schema:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI REST Microservice
+  api:
+    build: .
+    container_name: analytics_api
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-postgres}@postgres:5432/${DB_NAME:-customer_analytics}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  # Streamlit Interactive Dashboard
+  dashboard:
+    build: .
+    container_name: analytics_dashboard
+    command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+    volumes:
+      - .:/app
+
+volumes:
+  pgdata:

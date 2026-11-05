@@ -1,0 +1,12 @@
+feature,importance,model
+active_purchase_months,1.181750593285168,Logistic Regression
+total_purchase_lines,0.30822859217892684,Logistic Regression
+unique_products_purchased,0.28704461572598505,Logistic Regression
+total_spend,0.14773433603524386,Logistic Regression
+average_order_value,0.14582353564891404,Logistic Regression
+return_line_rate,0.14274481044780254,Logistic Regression
+average_line_value,0.12355885004193855,Logistic Regression
+total_units_purchased,0.11830083349279476,Logistic Regression
+return_lines,0.1120080136143084,Logistic Regression
+purchase_frequency,0.015417899442154295,Logistic Regression
+returned_units,0.010738774247680731,Logistic Regression

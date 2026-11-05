@@ -1,0 +1,12 @@
+feature,importance,model
+total_units_purchased,0.15570646792239273,Random Forest
+total_spend,0.14760113060693017,Random Forest
+total_purchase_lines,0.11974445406624908,Random Forest
+average_order_value,0.11495207430337903,Random Forest
+average_line_value,0.10459586282896965,Random Forest
+unique_products_purchased,0.09207242719731562,Random Forest
+purchase_frequency,0.08537389882501174,Random Forest
+active_purchase_months,0.08236720586608731,Random Forest
+return_line_rate,0.04073905870262296,Random Forest
+returned_units,0.03415121456643182,Random Forest
+return_lines,0.022696205114609964,Random Forest
