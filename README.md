@@ -1,4 +1,4 @@
-# Customer & Marketing Analytics
+# RetainIQ — Customer & Marketing Analytics Platform
 
 An end-to-end customer analytics project combining **PostgreSQL, SQL, Python, Pandas, statistical analysis, machine learning, and Power BI** to analyze customer value, retention, churn, and marketing campaign response.
 
@@ -402,8 +402,8 @@ Raw datasets, processed data, environment secrets, and the Power BI binary are e
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Anwesha0425/customer-marketing-analytics
-cd customer-marketing-analytics
+git clone https://github.com/Anwesha0425/retainiq
+cd retainiq
 ```
 
 ### 2. Create a virtual environment

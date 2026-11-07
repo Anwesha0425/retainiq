@@ -18,7 +18,7 @@ from src.modeling.advanced_models import (
 )
 
 app = FastAPI(
-    title="Customer & Marketing Analytics API",
+    title="RetainIQ API",
     description="Production REST API for churn prediction, RFM segmentation, and campaign optimization.",
     version="1.0.0",
 )

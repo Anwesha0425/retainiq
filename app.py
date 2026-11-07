@@ -24,16 +24,16 @@ def run_app():
         return
 
     st.set_page_config(
-        page_title="Customer & Marketing Analytics",
+        page_title="RetainIQ - Customer & Marketing Analytics",
         page_icon="📊",
         layout="wide",
         initial_sidebar_state="expanded",
     )
 
     # Sidebar Header
-    st.sidebar.title("🎯 Analytics Platform")
+    st.sidebar.title("🎯 RetainIQ")
     st.sidebar.markdown(
-        "**End-to-End Customer Value, Churn, Retention & Campaign Analytics**\n\n"
+        "**AI & ML Customer Retention, Value & Campaign Intelligence Platform**\n\n"
         "*Author: Anwesha Gouda*"
     )
     st.sidebar.markdown("---")
@@ -59,7 +59,7 @@ def run_app():
     # TAB 1: EXECUTIVE OVERVIEW
     # ----------------------------------------------------
     if menu == "🏠 Executive Overview":
-        st.title("📊 Customer & Marketing Analytics Suite")
+        st.title("📊 RetainIQ: Customer & Marketing Analytics Suite")
         st.markdown(
             "An enterprise analytics platform combining **PostgreSQL, SQL transformations, predictive ML, "
             "and business intelligence** to optimize customer lifetime value and campaign effectiveness."
